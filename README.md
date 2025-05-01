@@ -48,7 +48,7 @@ bookmark-manager/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/bookmark-manager.git
+   git clone https://github.com/costa253-hash/Build-a-Bookmark-Manager-App.git
    cd bookmark-manager
    ```
 
