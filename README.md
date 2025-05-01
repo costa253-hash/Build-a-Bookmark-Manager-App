@@ -36,13 +36,13 @@ A simple web-based Bookmark Manager that allows users to save, view, and delete 
 
 🧪 **How It Works**
 **Add Bookmark**
-Select a category from the dropdown.
+ 1. Select a category from the dropdown.
 
-Click Add Bookmark.
+ 2. Click Add Bookmark.
 
-Enter a name and URL.
+ 3. Enter a name and URL.
 
-Click Submit — the bookmark is saved to localStorage.
+ 4. Click Submit — the bookmark is saved to localStorage.
 
 **View Bookmarks**
 Click View Category to list bookmarks under the selected category.
