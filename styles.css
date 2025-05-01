@@ -1,8 +1,11 @@
 :root {
-    --light-grey: #f5f6f7;
-    --dark-grey: #0a0a23;
-    --yellow: #f1be32;
-    --golden-yellow: #feac32;
+    --bg-dark: #1e293b;
+    --bg-section: #334155;
+    --accent: #0d9488;
+    --accent-hover: #0f766e;
+    --text-light: #f1f5f9;
+    --input-bg: #ffffff;
+    --input-text: #1e293b;
   }
   
   *,
@@ -13,90 +16,105 @@
     box-sizing: border-box;
   }
   
+  body {
+    background-color: var(--bg-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-light);
+    padding: 40px 20px;
+  }
+  
   main {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
   
-  body {
-    background-color: var(--dark-grey);
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 30px;
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    background-color: var(--bg-section);
+    box-shadow: 0 0 10px rgba(13, 148, 136, 0.2);
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  select,
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid var(--accent);
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    font-size: 16px;
+  }
+  
+  #dropdown {
+    width: 100%;
+  }
+  
+  #buttons,
+  form > div:last-of-type,
+  #bookmark-list-section > div:last-of-type {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  button {
+    cursor: pointer;
+    padding: 10px 16px;
+    min-width: 120px;
+    border-radius: 6px;
+    border: 2px solid var(--accent);
+    background-color: var(--accent);
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--accent-hover);
+  }
+  
+  #category-list {
+    width: 100%;
+    background-color: var(--input-bg);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: left;
+    overflow-y: auto;
+    max-height: 300px;
+  }
+  
+  #category-list p {
+    color: var(--input-text);
+    margin-bottom: 8px;
+    font-size: 14px;
   }
   
   .hidden {
     display: none;
   }
   
-  section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  select,
-  input,
-  label {
-    margin-left: 10px;
-  }
-  
-  div {
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .close-form-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  h1, h2 {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  #category-list {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: var(--light-grey);
-    align-self: center;
-    width: 80%;
-    margin-top: 15px;
-    border-radius: 10px;
-  }
-  
-  #category-list,
-  h1,
-  h2,
-  label {
-    color: var(--light-grey);
-  }
-  
-  #category-list p {
-    color: var(--dark-grey);
-  }
-  
-  button {
-    cursor: pointer;
-    padding: 5px;
-    width: 100px;
-    margin: 10px;
-    color: var(--dark-grey);
-    background-color: var(--golden-yellow);
-    background-image: linear-gradient(#fecc4c, #ffac33);
-    border-color: var(--golden-yellow);
-    border-width: 3px;
-  }
-  
-  button:hover {
-    background-image: linear-gradient(#ffcc4c, #f89808);
-  }
-  
-  section {
-    margin-top: 60px;
-    border: 2px solid var(--golden-yellow);
-    width: fit-content;
-    border-radius: 10px;
-  }
